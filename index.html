@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>HTML to PDF</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+	</head>
+	<body>
+
+
+
+    <h4 style="font-family: Arial Unicode MS, FreeSans; font-size:16px; font-weight: normal; " >Здраво Kristijan!</h4>
+
+		<h1>HTML to PDF</h1>
+		<p>
+			<span class="itext">itext</span> 5.4.2 <span class="description"> converting HTML to PDF</span>
+		</p>
+		<table>
+		  <tr>
+				<th class="label">Title</th>
+				<td>iText - Java HTML to PDF</td>
+			</tr>
+			<tr>
+				<th>URL</th>
+				<td>http://hmkcode.com/itext-html-to-pdf-using-java</td>
+			</tr>
+		</table>
+        <div class="modal-body">
+
+
+                        <div ng-hide="vm.loading" ng-bind-html="vm.invoice" class="ng-binding">
+
+
+            <title>Фактура № 48</title>
+            <style>
+                .invoiceMainContainer {
+                    width: 640px;
+                    font-size: 10px;
+                    margin: 0 auto;
+                    font-family: FreeSans, sans-serif;
+                    /*font-family: FreeSans;*/
+                }
+
+                .invoiceTable table, .invoiceTable tr, .invoiceTable td, .invoiceTable th{
+                    font-size: 10px !important;
+                }
+
+                .invoiceBold {
+                    font-weight: bold;
+                }
+
+                .invoiceLeftText {
+                    text-align: left !important;
+                }
+
+                .invoiceCustomerPanel {
+                    width: 50%;
+                    float: left;
+                }
+
+                .invoiceProviderPanel {
+                    width: 50%;
+                    float: left;
+                }
+
+                .invoiceDetailsLabel {
+                    width: 90px;
+                    display: inline-block;
+                }
+
+                .invoiceParagraph {
+                    padding-top: 5px;
+                    display: inline-block;
+                }
+
+                .invoiceUppercase {
+                    text-transform: uppercase;
+                }
+
+                .invoiceTitle {
+                    margin-top: 20px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.2em;
+                }
+
+                .invoiceType {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.0em;
+                }
+
+                .invoiceNumber {
+                    width: 100%;
+                    display: inline-block;
+                }
+
+                .invoiceClearBoth {
+                    clear: both;
+                    line-height: 1px;
+                    font-size: 1px !important;
+                }
+
+                .invoiceItemsTable {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+
+                .invoiceItemsTable th {
+                    border-bottom: 2px solid #cccccc;
+                }
+
+                .invoiceAmountsTable {
+                    width: 100%;
+                }
+
+                .invoiceAmountsTable td {
+                    border-bottom: 2px solid #cccccc;
+                    text-align: right;
+                }
+
+                .totalAmountAsText {
+                    margin-top: 20px;
+                }
+
+                .invoicePaymentType {
+                    margin-top: 20px;
+                }
+
+                .invoiceFooter {
+                    display: inline-block;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+
+                .signInvoice {
+                    margin-top: 10px;
+                }
+
+                .invoiceHeader3 {
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+            </style>
+
+
+
+
+        <div class="invoiceMainContainer">
+            <div id="pageHeader" class="pageHeader">
+                <div style="width: 100%">
+                    <div style="width:60%; float:left;">
+                        <div>ДЖИ ПИ ЕС БЪЛГАРИЯ АД, ул.Кукуш 1, София 1309</div>
+                        <div>телефон +359(02)4858703/2</div>
+                    </div>
+                    <div style="float: right;">
+                        <img alt="gps_logo_crop.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAABVCAIAAAAdeDv0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AMeCBM78wESUAAABUZJREFUeNrtXUtugzAQtaOoB+m2C3qBSsG+A7epAHXdg9BueoECUk4QiZ6HLpAQcojxZ2ZsEs8uVQO233zf2A4fx5EliU8OaQkSMEkSMAmYJEhyTEsAIn3f930/f6zrmjFWluX8l9PpdDqdzB/IA2ZlymT0c+Cc+79RCPH29jZ/rKrK84FVVf38/FwuF/OvTGht4zRSSVmWZVkKIUyGrny36zo8/SjLsus6q7l0XWcyEZ9X4wLTdZ0hGHpglj4BFSEySBQ7vn41wzMO54FeKxENMJvwgEOylCzLlhNn4PbhP8RVpCmDnxBCUQ5UX7r6agZlIoDatOJwQ8iMDRkqS5Nl/laSZRnsyCIBhjE2DAMxKvP0maeh0Lj4hyqJpik7Fph93+d5TlbuJErGSKSUZKg8GjCzEzrGZij+1fjDcWVVVU0U0C40ThGakU+Uj6Jb08fz+dy2rVcKRF9b6cdj/mohBH22Yvhqw1LPosAchkGfED89PW2O2/B/iqLQp2T655hwKuM4Nk2TZRnUsJ+fn4dhsE1oh2Eoy3K5sNO7TIEZhoHA+cyyyujBkl2zQJVfTdN41oKzS1iaHaMZvQKDOZtrVd9ZkcQgOmfowQzr9KViMZq4YqXLzlHBWVXp57WqKEYkJggV4dDqoATGn1PwnJ1uYEioQKkSNjCeRoPXymLgwwW0brzID5VAw052KcfVQtKuFFpEwt/f34eqz8/nMx1X5lYkd133aKgwxtq2/fv7owBGSumGitXenHuiL7+/v9EpELeY71D3RhL5oUgajNzs4KmhQoiXl5f9+iIQcjPPc3jj9knqoeregBZDz2Nap8u2Ro2NitWquQ0Gg2yGcmvMWXfwil6yIiZsC8Aoxti6SCEERhpGKXit0rZtOee+z3czaprtzngWQ7Mp6XrjoLUri4SHoIn8ZN1YH8/msktmv06sqirOuRvh5OPZXl9fbb91dPC2ewFmef4m7DaSy+XCObfjR/RO47rp7ebHvr6+NkcCuHfAZOLmjwLc8lAUhSFRwmwDjFs0a5pmp95vmi9ssmCyhtbAuEXyoij2iEqWZUiJ3CY2CRg7fhYwo9Njk4CxXjhA09FgQwQM+Dao4JUHlOkEBuYODAXpoOwtJUjA+FYC/l56ff9pAmb1NDdl+2DVaCiAIT5zbG4fgJ0LT7d2PRLro35VVWFTOFZHSZRbSDZHgsQnTU+WUroRcX3fqwOLkFom6CjjiVsyfe3NWITNmF0D44wNAO3/mMeIrdwaQFiNsFEGWwmGEttcQKF/XCymrutIjMY87NPL+/u71f8rW20PsxFYPeXj4yO5LNhcVJGD21PatkXaZXJPAcwr0viwchhby/aekjnP5WaMcfDXKHt2Q0gM13GoW8D15LxJQ/vz8xNQy/ScoDIeQL2eDg3DnlywWsaNo34EbHnYbbGbDifI6dHrlx6g4lWe51LKPV7RoxzXq+uacy6l9PHSfd/7bpjC6M35ELf0FqN5xeoVKhiUjG63P1L7RH8diY/5UzpPc1VzUOub/ZhQe65ByCTKSLDUM2W5fK5rvdnB3Ck2QYABl1t030HDKOzCbvYuNym1PXaFaSJ/2Fmw+I39XoHR9yyYYf5HfNiHBpiAvnqzk8R2FCeD1+dkqIy2N5XHYzoBaWACVEa3K+ShfvUiHmDIzmaaF8W+d/uHMiDUJgrGpGx9L8AMp5tqY/PR/nkB1KSEEA7dBOAfj3O8ldte+8hobOcZrd5abi7ov+qHsYJ4O11N+PzNdgDI8PiYfgQ7Skm/HJuASZKAScAkScAkYJIkYJLclH+EPoSH1IkBmQAAAABJRU5ErkJggg=="/>
+                    </div>
+                </div>
+                <div class="invoiceClearBoth">&nbsp;</div>
+
+
+                <div style="margin-top: 15px">
+
+
+                    <div class="invoiceLeftText invoiceCustomerPanel invoiceUppercase">
+                        <div class="invoiceHeader3">ПОЛУЧАТЕЛ :</div>
+
+                        <div class="invoiceBold">
+                            <div class="invoiceParagraph">
+                                <span class="invoiceDetailsLabel">КЛИЕНТ :</span><span>Красимир  Райков</span>
+                            </div>
+                            <div class="invoiceParagraph">
+                                <div class="invoiceDetailsLabel" style="float: left">Адрес :</div>
+                                <div style="float: left">
+                                    <div>
+                                        <span>ул НИКОЛА ГАБРОВСКИ 32</span>
+                                    </div>
+                                    <div>
+                                        <span>ВЕЛИКО ТЪРНОВО</span>
+                                    </div>
+                                    <div>
+                                        <span>България</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="invoiceParagraph" style="display: inline-block">
+                                <div style="float:left">
+                                    <span class="invoiceDetailsLabel">АДРЕС ЗА КОРЕСПОНД:</span>
+                                </div>
+                                <div style="float:left">
+                                    <div>
+                                        ул НИКОЛА ГАБРОВСКИ 32
+                                    </div>
+                                    <div>
+                                        ВЕЛИКО ТЪРНОВО
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="invoiceDetailsLabel">ЕГН:</span><span>9401211400</span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class=" invoiceLeftText invoiceProviderPanel">
+                        <div class="invoiceHeader3">ИЗПЪЛНИТЕЛ :</div>
+                        <div class="invoiceBold">
+                            <div>
+                                <span class="invoiceDetailsLabel">ПРЕДПРИЯТИЕ :</span><span>ДЖИ ПИ ЕС БЪЛГАРИЯ АД</span>
+                            </div>
+
+                            <div class="invoiceParagraph">
+                                <div class="invoiceDetailsLabel" style="float: left">Адрес :</div>
+                                <div style="float: left">
+                                    <div>
+                                        <span>ул."Кукуш" No 1</span>
+                                    </div>
+                                    <div>
+                                        <span>община Илинден</span>
+                                    </div>
+                                    <div>
+                                        <span>София - 1309</span>
+                                    </div>
+                                    <div>
+                                        <span>България</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="invoiceParagraph">
+                                <span class="invoiceDetailsLabel">ИД.No по ДДС:</span><span>BG121707332</span>
+                            </div>
+                            <div>
+                                <span class="invoiceDetailsLabel">ЕИК:</span><span>121707332</span>
+                            </div>
+                            <div>
+                                <span class="invoiceDetailsLabel">IBAN:</span><span>BG39STSA93000010117361</span>
+                            </div>
+                            <div>
+                                <span class="invoiceDetailsLabel">BIC:</span><span>STSABGSF</span>
+                            </div>
+                            <div>
+                                <span class="invoiceDetailsLabel">БАНКА:</span><span>БАНКА ДСК ЕАД</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invoiceClearBoth">&nbsp;</div>
+                </div>
+
+                <div class="invoiceTitle invoiceBold">
+
+                           <span>ФАКТУРА</span>
+
+
+                    </div>
+                <div class="invoiceType">
+
+                           <span>ОРИГИНАЛ</span>
+
+                </div>
+                <div class="invoiceNumber">
+                    <div style="width: 100%;" class="invoiceBold">
+                        <div>
+                            <div style="float: left;width: 50%;"><span style="float:right; width: 50px;">Номер</span></div>
+                            <div style="float: left;width: 50%;"><span style="margin-left: 15px;">48</span></div>
+                        </div>
+                        <div>
+                            <div style="float: left;width: 50%;"><span style="float:right; width: 50px;">Дата</span></div>
+                            <div style="float: left;width: 50%;"><span style="margin-left: 15px;">10.02.2017 г.</span></div>
+                        </div>
+                        <div>
+                            <div style="float: left;width: 50%;"><span style="float:right; width: 50px;">Място</span></div>
+                            <div style="float: left;width: 50%;"><span style="margin-left: 15px;">София</span></div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div calss="invoiceItems">
+                <table class="invoiceItemsTable invoiceTable" cellpadding="0" cellspacing="0" border="0">
+                    <tbody><tr>
+                        <th style="width:30px; text-align: center;">No</th>
+                        <th style="width:70px; text-align: center;">Код на материал</th>
+                        <th>Основание и предметна сделката</th>
+                        <th style="width:60px; text-align: right;">Количество</th>
+                        <th style="width:50px; text-align: right;">Мярка</th>
+                        <th style="width:70px; text-align: right;">Единична цена</th>
+                        <th style="width:70px; text-align: right;">Стойност лева</th>
+                    </tr>
+                    </tbody><tbody>
+
+
+
+                    <tr>
+                        <td style="width:30px; text-align: center;">1</td>
+                        <td style="width:70px; text-align: center;"></td>
+                        <td>Fleet Expert M</td>
+                        <td style="width:60px; text-align: right;">1.0</td>
+                        <td style="width:50px; text-align: right;"></td>
+                        <td style="width:70px; text-align: right;">13.32</td>
+                        <td style="width:70px; text-align: right;">13.32
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width:30px; text-align: center;">2</td>
+                        <td style="width:70px; text-align: center;"></td>
+                        <td>Fleet Expert M</td>
+                        <td style="width:60px; text-align: right;">1.0</td>
+                        <td style="width:50px; text-align: right;"></td>
+                        <td style="width:70px; text-align: right;">9.03</td>
+                        <td style="width:70px; text-align: right;">9.03
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <table class="invoiceAmountsTable invoiceTable" cellpadding="0" cellspacing="0" border="0">
+                    <tbody><tr>
+                        <td colspan="2">Стойност на сделката</td>
+                        <td style="width: 70px;;">22.35</td>
+                    </tr>
+                    <tr>
+                        <td>ДДС</td>
+                        <td style="width: 70px;">20.00%</td>
+                        <td style="width: 70px;">4.47</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="width: 70px;">Всичко</td>
+                        <td style="width: 70px;">26.82</td>
+                    </tr>
+                </tbody></table>
+            </div>
+
+            <div class="totalAmountAsText">
+                <span>Словом : ВСИЧКО </span><span>двадесет и шест лева и осемдесет и две стотинки</span>
+            </div>
+            <div class="invoicePaymentType">
+                <div>
+                    Начин на плащане: __ по банков път / __ в брой
+                </div>
+                <div>
+                    Условие на плащане: Платимо Веднага Банков превод-дата документ
+                </div>
+            </div>
+            <div class="invoiceFooter">
+                <div style="float:left; width: 50%">
+                    <div>Дата на данъчно събитие: 10.02.2017</div>
+                    <div>Стоката получена:</div>
+                    <div>Дата:</div>
+                    <div>От:</div>
+                </div>
+                <div style="float:left; width: 50%">
+                    <div>Съставил:</div>
+                    <br/>
+                    <div>Станислава Каукова</div>
+                    <div>Идентифик.шифър:</div>
+                </div>
+            </div>
+            <div class="signInvoice">
+                Подпис:
+            </div>
+        </div>
+
+        </div>
+                    </div>
+
+
+
+	</body>
+</html>

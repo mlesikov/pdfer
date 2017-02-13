@@ -1,0 +1,87 @@
+group 'pdfer'
+version '1.0-SNAPSHOT'
+
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'com.google.appengine:gradle-appengine-plugin:1.9.48'
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'appengine'
+
+sourceCompatibility = 1.5
+
+def explodedDir = "$buildDir/exploded-app"
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  
+  // https://mvnrepository.com/artifact/com.itextpdf/itextpdf
+  compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.10'
+  
+  // https://mvnrepository.com/artifact/com.itextpdf.tool/xmlworker
+  compile group: 'com.itextpdf.tool', name: 'xmlworker', version: '5.5.10'
+
+  appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.48'
+
+//  compile 'com.google.guava:guava:19.0'
+
+  // compile 'javax.servlet:servlet-api:2.5'
+  compile 'javax.servlet:javax.servlet-api:3.1.0'
+//  compile 'com.google.http-client:google-http-client:1.22.0'
+//  compile 'com.google.http-client:google-http-client-gson:1.22.0'
+//  compile 'com.google.http-client:google-http-client-appengine:1.22.0'
+//  compile 'com.google.oauth-client:google-oauth-client:1.22.0'
+
+//  compile('com.google.oauth-client:google-oauth-client-servlet:1.22.0') {
+//    exclude module: 'google-http-client-jdo'
+//    exclude module: 'jdo2-api'
+//  }
+  // Security Libraries
+//  compile 'io.jsonwebtoken:jjwt:0.6.0'
+
+  compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.48'
+  compile 'com.google.appengine:appengine-tools-sdk:1.9.48'
+
+//  compile 'org.freemarker:freemarker-gae:2.3.23'
+
+//  testCompile project(":testing")
+//  testCompile 'com.google.appengine:appengine-api-stubs:1.9.48', 'com.google.appengine:appengine-testing:1.9.48'
+//  testCompile 'org.eclipse.jetty:jetty-server:8.1.8.v20121106', 'org.eclipse.jetty:jetty-servlet:8.1.8.v20121106'
+
+  testCompile group: 'junit', name: 'junit', version: '4.11'
+
+}
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+  maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+appengine {
+  downloadSdk = true
+  appcfg {
+    oauth2 = true
+  }
+}
+
+test {
+  // set heap size for the test JVM(s)
+  minHeapSize = '2g'
+  maxHeapSize = '4g'
+
+  jvmArgs "-XX:MaxPermSize=1g"
+}
+
+

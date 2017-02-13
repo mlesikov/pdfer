@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+  <application>clouwaytestapp</application>
+  <version>1</version>
+
+  <module>default</module>
+
+   <basic-scaling>
+    <max-instances>2</max-instances>
+    <idle-timeout>10m</idle-timeout>
+  </basic-scaling>
+
+  <static-files>
+
+    <include path="/**.gif"/>
+    <include path="/**.png"/>
+    <include path="/**.jpg"/>
+    <include path="/**.html"/>
+    <include path="/**.ico"/>
+    <include path="/**.js"/>
+    <include path="/**.css"/>
+    <include path="/stylesheets/main.css"/>
+    <!--include the fonts-->
+    <include path="/**.woff"/>
+    <include path="/**.woff2"/>
+    <include path="/**.otf"/>
+    <include path="/**.ttf"/>
+    <include path="/**.eot"/>
+    <include path="/**.svg"/>
+
+    <!-- include ui translation files -->
+    <include path="/assets/i18n/**.json"/>
+
+    <!--include apk files-->
+    <include path="/**.apk"/>
+
+  </static-files>
+
+  <resource-files>
+    <!--include apk files-->
+    <include path="/**.apk"/>
+
+  </resource-files>
+
+  <system-properties>
+    <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+    <property name="jwt-api-key" value="telcong"/>
+    <property name="accounts.endpoint" value="accounts"/>
+    <property name="bssApp.endpoint" value="bss-app:1"/>
+  </system-properties>
+
+  <sessions-enabled>true</sessions-enabled>
+  <threadsafe>true</threadsafe>
+  <precompilation-enabled>true</precompilation-enabled>
+
+
+</appengine-web-app>
