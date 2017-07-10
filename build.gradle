@@ -16,7 +16,7 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'appengine'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 
 def explodedDir = "$buildDir/exploded-app"
 
@@ -28,11 +28,13 @@ dependencies {
   
   // https://mvnrepository.com/artifact/com.itextpdf/itextpdf
   compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.10'
+
+
   
   // https://mvnrepository.com/artifact/com.itextpdf.tool/xmlworker
   compile group: 'com.itextpdf.tool', name: 'xmlworker', version: '5.5.10'
 
-  appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.48'
+  appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.54'
 
 //  compile 'com.google.guava:guava:19.0'
 
@@ -50,8 +52,8 @@ dependencies {
   // Security Libraries
 //  compile 'io.jsonwebtoken:jjwt:0.6.0'
 
-  compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.48'
-  compile 'com.google.appengine:appengine-tools-sdk:1.9.48'
+  compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.54'
+  compile 'com.google.appengine:appengine-tools-sdk:1.9.54'
 
 //  compile 'org.freemarker:freemarker-gae:2.3.23'
 
