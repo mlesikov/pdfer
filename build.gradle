@@ -27,12 +27,21 @@ repositories {
 dependencies {
   
   // https://mvnrepository.com/artifact/com.itextpdf/itextpdf
-  compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.10'
+//  compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.10'
 
+  // https://mvnrepository.com/artifact/com.itextpdf/itextg
+//  compile group: 'com.itextpdf', name: 'itextg', version: '5.5.10'
+
+
+
+  compile 'com.itextpdf:itext7-core:7.1.2'
+  compile group: 'com.itextpdf', name: 'html2pdf', version: '2.0.2'
+
+  
 
   
   // https://mvnrepository.com/artifact/com.itextpdf.tool/xmlworker
-  compile group: 'com.itextpdf.tool', name: 'xmlworker', version: '5.5.10'
+  compile group: 'com.itextpdf.tool', name: 'xmlworker', version: '5.5.13'
 
   appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.54'
 
